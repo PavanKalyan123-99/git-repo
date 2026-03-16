@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Json and local storage</title>
+</head>
+<body>
+  <script>
+    /*
+    const product = {
+      name : "shirt",
+      price : 500,
+      rating : {
+        stars : 4.5,
+      },
+      fun(){
+        console.log("function inside object");
+      },
+    };
+
+    console.log(JSON.stringify(product));
+
+
+    const jsonstring = JSON.stringify(product);
+
+    console.log(JSON.parse(jsonstring));
+*/
+const student = {
+  name : "pavan kalyan",
+  course : "full stack",
+};
+const studentJSON = JSON.stringify(student);
+localstorage.setItem("student", studentJSON);
+
+
+const storedData = localstorage.getItem("student");
+const parsedstudent = JSON.parse(storedData);
+
+console.log(parsedstudent.course);
+
+  </script>
+  
+</body>
+</html>
+
+
+
+/* 
+json only woks for strings arrays numbers booleans objects null
+json does not support the functions
+why json object is better than javascript object 
+javascript object is only run in javascript only but json object is run in universe nothing but it run in all languages
+*/
